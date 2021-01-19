@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+    target_1:
+        container_name: "target_1"
+        image: node:latest
+        command: node app.js /data/target
+        ports:
+            - 9999:9997
+        working_dir: /data
+        volumes:
+            - C:\Repos\selenium_maven\application:/data
+    target_2:
+        container_name: "target_2"
+        image: node:latest
+        command: node app.js /data/target
+        ports:
+            - 9998:9997
+        working_dir: /data
+        volumes:
+            - C:\Repos\selenium_maven\application:/data
+    splitter:
+        container_name: "splitter"
+        image: node:latest
+        command: node app.js /data/splitter
+        ports:
+            - 9996:9997
+        working_dir: /data
+        volumes:
+            - C:\Repos\selenium_maven\application:/data
+    agent:
+        container_name: "agent"
+        image: node:latest
+        command: node app.js /data/agent
+        ports:
+            - 9995:9997
+        working_dir: /data
+        volumes:
+            - C:\Repos\selenium_maven\application:/data

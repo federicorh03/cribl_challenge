@@ -1,0 +1,9 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<suite name = "Flow test Suite" verbose="10">
+    <test name = "Integrity test">
+        <classes>
+            <class name = "testPackage.ReplicateDataTest" />
+        </classes>
+    </test>
+</suite>
